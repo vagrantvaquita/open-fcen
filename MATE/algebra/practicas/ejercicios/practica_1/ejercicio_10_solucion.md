@@ -1,36 +1,5 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Lógica y Demostraciones
-practica: 1
-ejercicio: 10
----
+En el ámbito de la lógica proposicional, la equivalencia entre distintas fórmulas se establece cuando estas comparten los mismos valores de verdad para cualquier combinación posible de las variables que las integran. Una herramienta fundamental para verificar estas relaciones es la construcción de tablas de verdad, las cuales nos permiten visualizar de manera exhaustiva el comportamiento de conectivos lógicos como la implicación, la disyunción y la negación.
 
-# Solución del Ejercicio 10
+Al analizar la equivalencia entre la implicación $p \Rightarrow q$, su contrarrecíproco $\sim q \Rightarrow \sim p$, la disyunción $\sim p \vee q$ y la negación de la conjunción $\sim (p \wedge \sim q)$, observamos a través de una tabla de verdad que las cuatro expresiones resultan falsas únicamente cuando el antecedente $p$ es verdadero y el consecuente $q$ es falso, siendo verdaderas en todos los demás casos. Esta concordancia absoluta confirma que son formas lógicamente intercambiables. De manera similar, al evaluar la negación de una implicación, $\sim (p \Rightarrow q)$, encontramos que coincide punto a punto con la conjunción $p \wedge \sim q$. Esto significa que la única forma de que una promesa "si p, entonces q" sea falsa es que se cumpla la condición $p$ pero no se verifique la consecuencia $q$.
 
-Dos proposiciones son equivalentes si y solo si poseen los mismos valores de verdad para todas las combinaciones posibles de sus variables proposicionales. Para verificar esto, utilizaremos tablas de verdad {puddu2012conjuntos}.
-
-### i) $p \Rightarrow q \equiv \sim q \Rightarrow \sim p \equiv \sim p \vee q \equiv \sim (p \wedge \sim q)$
-
-Construimos la tabla de verdad para las cuatro expresiones:
-
-| $p$ | $q$ | $p \Rightarrow q$ | $\sim q$ | $\sim p$ | $\sim q \Rightarrow \sim p$ | $\sim p \vee q$ | $p \wedge \sim q$ | $\sim (p \wedge \sim q)$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| V | V | **V** | F | F | **V** | **V** | F | **V** |
-| V | F | **F** | V | F | **F** | **F** | V | **F** |
-| F | V | **V** | F | V | **V** | **V** | F | **V** |
-| F | F | **V** | V | V | **V** | **V** | F | **V** |
-
-Dado que las columnas en negrita coinciden en todos sus valores, concluimos que las cuatro proposiciones son equivalentes. La equivalencia $p \Rightarrow q \equiv \sim q \Rightarrow \sim p$ es la base de la **demostración por contrarrecíproco**.
-
-### ii) $\sim (p \Rightarrow q) \equiv p \wedge \sim q$
-
-Construimos la tabla de verdad para ambas expresiones:
-
-| $p$ | $q$ | $p \Rightarrow q$ | $\sim (p \Rightarrow q)$ | $\sim q$ | $p \wedge \sim q$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| V | V | V | **F** | F | **F** |
-| V | F | F | **V** | V | **V** |
-| F | V | V | **F** | F | **F** |
-| F | F | V | **F** | V | **F** |
-
-Nuevamente, las columnas en negrita coinciden. Esta equivalencia justifica la **demostración por reducción al absurdo**: para probar que $p \Rightarrow q$ es verdadera, se supone que su negación $p \wedge \sim q$ es verdadera y se busca llegar a una contradicción {uba2017fasciculo9}.
+Estas equivalencias no son meras curiosidades simbólicas; constituyen la base de los métodos de demostración más utilizados en matemáticas. Por ejemplo, la validez del contrarrecíproco nos permite probar una sentencia difícil atacando su forma alternativa, mientras que la comprensión de la negación de la implicación es el punto de partida indispensable para realizar demostraciones por reducción al absurdo, técnicas que son transversales a todos los contenidos de la carrera.

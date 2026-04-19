@@ -1,59 +1,7 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Funciones
-practica: 1
-ejercicio: 30
----
+Las propiedades de inyectividad, sobreyectividad y biyectividad permiten caracterizar el comportamiento de una función respecto a la distribución de sus imágenes. Una función es inyectiva si elementos distintos del dominio tienen imágenes distintas; es sobreyectiva si cada elemento del codominio es imagen de al menos un elemento del dominio; y es biyectiva si cumple ambas condiciones simultáneamente, estableciendo una correspondencia uno a uno perfecta. Para determinar estas propiedades, se suelen utilizar métodos algebraicos de igualación o el análisis del recorrido de la función.
 
-# Ejercicio 30
+Al analizar $f(x) = 12x^2 - 5$ de $\mathbb{R}$ en $\mathbb{R}$, vemos que $f(1) = f(-1) = 7$, por lo que no es inyectiva al haber dos elementos con la misma imagen. Tampoco es sobreyectiva porque su imagen es el intervalo $[-5, +\infty)$, dejando fuera a los números menores a $-5$. En funciones de varias variables como $f(x,y) = x + y$ hacia $\mathbb{R}$, la sobreyectividad se cumple fácilmente ya que cualquier número real $z$ puede obtenerse como $f(z, 0)$, pero no hay inyectividad pues pares distintos como $(1,0)$ y $(0,1)$ dan el mismo resultado. Similarmente, $f(x,y,z) = (x+y, 2z)$ es sobreyectiva pero no inyectiva.
 
-Determinar si las siguientes funciones son inyectivas, sobreyectivas o biyectivas:
+En el ámbito de los números enteros y naturales, las funciones partidas requieren un análisis por casos. La función $f(n)$ definida como $n/2$ para pares y $n+1$ para impares en $\mathbb{N}$ no es inyectiva ($f(1)=f(4)=2$), pero es sobreyectiva ya que todo $k \in \mathbb{N}$ proviene de un $n=2k$. Por otro lado, $f(a,b)=3a-2b$ en $\mathbb{Z}^2$ es sobreyectiva debido a la identidad de Bézout, pero no inyectiva. Un caso notable es la función de $\mathbb{Z}$ en $\mathbb{N}$ que asigna $2a$ para positivos y $1-2a$ para no positivos; esta función es biyectiva, pues los positivos mapean a los pares y el resto a los impares, cubriendo todo el codominio sin repetir imágenes.
 
-* i) $f: \mathbb{R} \longrightarrow \mathbb{R}$, $f(x) = 12x^2 - 5$
-* ii) $f: \mathbb{R}^2 \longrightarrow \mathbb{R}$, $f(x,y) = x + y$
-* iii) $f: \mathbb{R}^3 \longrightarrow \mathbb{R}^2$, $f(x,y,z) = (x+y, 2z)$
-* iv) $f:\mathbb{N}\longrightarrow\mathbb{N}$, $f(n)=\begin{cases} \frac{n}{2} & \text{si } n \text{ es par} \\ n+1 & \text{si } n \text{ es impar} \end{cases}$
-* v) $f:\mathbb{Z}\times\mathbb{Z}\longrightarrow\mathbb{Z},$ $f(a,b)=3a-2b$
-* vi) $f:\mathbb{Z}\rightarrow\mathbb{N}$ $f(a)=\begin{cases}2a&si~a>0\\ 1-2a&si~a\le0\end{cases}$
-
-## Resolución
-
-### i) $f(x) = 12x^2 - 5$
-- **Inyectividad:** Una función es inyectiva si $f(x_1) = f(x_2) \implies x_1 = x_2$. Aquí, $f(1) = 12(1)^2 - 5 = 7$ y $f(-1) = 12(-1)^2 - 5 = 7$. Como $f(1) = f(-1)$ pero $1 \neq -1$, **no es inyectiva**.
-- **Sobreyectividad:** Una función es sobreyectiva si su imagen es igual al conjunto de llegada ($\mathbb{R}$). Dado que $x^2 \ge 0$ para todo $x \in \mathbb{R}$, entonces $12x^2 \ge 0$ y $f(x) \ge -5$. La imagen de $f$ es $[-5, +\infty)$, que no es igual a $\mathbb{R}$. **No es sobreyectiva**.
-- **Biyectividad:** Como no es inyectiva ni sobreyectiva, **no es biyectiva**.
-
-### ii) $f(x,y) = x + y$
-- **Inyectividad:** $f(1, 0) = 1+0 = 1$ y $f(0, 1) = 0+1 = 1$. Como $(1,0) \neq (0,1)$, **no es inyectiva**.
-- **Sobreyectividad:** Sea $z \in \mathbb{R}$. Queremos ver si existe $(x,y) \in \mathbb{R}^2$ tal que $x+y=z$. Podemos tomar, por ejemplo, $x=z$ e $y=0$. Entonces $f(z, 0) = z$. **Es sobreyectiva**.
-- **Biyectividad:** **No es biyectiva**.
-
-### iii) $f(x,y,z) = (x+y, 2z)$
-- **Inyectividad:** $f(1, 0, 0) = (1, 0)$ y $f(0, 1, 0) = (1, 0)$. Como $(1,0,0) \neq (0,1,0)$, **no es inyectiva**.
-- **Sobreyectividad:** Sea $(u, v) \in \mathbb{R}^2$. Buscamos $(x,y,z)$ tal que $x+y=u$ y $2z=v$. Podemos elegir $z = v/2$, $x = u$ e $y = 0$. Como siempre existen tales valores en $\mathbb{R}$, **es sobreyectiva**.
-- **Biyectividad:** **No es biyectiva**.
-
-### iv) $f(n)=\begin{cases} n/2 & n \text{ par} \\ n+1 & n \text{ impar} \end{cases}$ ($n \in \mathbb{N}$)
-- **Inyectividad:** Evaluamos algunos valores: $f(1) = 1+1=2$ y $f(4) = 4/2=2$. Como $f(1)=f(4)$ pero $1 \neq 4$, **no es inyectiva**.
-- **Sobreyectividad:** Sea $k \in \mathbb{N}$. Queremos ver si existe $n \in \mathbb{N}$ tal que $f(n)=k$. Si tomamos $n=2k$ (que es par), entonces $f(n) = (2k)/2 = k$. Como esto vale para cualquier $k \in \mathbb{N}$, **es sobreyectiva**.
-- **Biyectividad:** **No es biyectiva**.
-
-### v) $f(a,b)=3a-2b$ ($a,b \in \mathbb{Z}$)
-- **Inyectividad:** $f(2, 3) = 3(2)-2(3) = 0$ y $f(0, 0) = 3(0)-2(0) = 0$. Como $(2,3) \neq (0,0)$, **no es inyectiva**.
-- **Sobreyectividad:** Sea $k \in \mathbb{Z}$. Buscamos $a,b \in \mathbb{Z}$ tales que $3a-2b=k$. Como el máximo común divisor entre 3 y 2 es 1, existen $x,y \in \mathbb{Z}$ tales que $3x-2y=1$ (identidad de Bézout, por ejemplo $x=1, y=1$). Multiplicando por $k$: $3(xk) - 2(yk) = k$. Tomando $a=xk$ y $b=yk$, tenemos $f(a,b)=k$. **Es sobreyectiva**.
-- **Biyectividad:** **No es biyectiva**.
-
-### vi) $f(a)=\begin{cases}2a& a>0\\ 1-2a& a\le0\end{cases}$ ($a \in \mathbb{Z}, f(a) \in \mathbb{N}$)
-- **Inyectividad:** 
-  - Si $a>0$, $f(a)$ es un número par positivo ($2, 4, 6, \dots$).
-  - Si $a \le 0$, $f(a)$ es un número impar positivo ($1, 3, 5, \dots$ ya que $a=0 \to 1, a=-1 \to 3$, etc.).
-  - Un número par no puede ser igual a uno impar, por lo que no hay cruces entre ramas. Dentro de cada rama, las funciones lineales son inyectivas. Por lo tanto, **es inyectiva**.
-- **Sobreyectividad:** 
-  - Los números pares $\{2, 4, 6, \dots\}$ son alcanzados por la rama $a>0$ (tomando $a = k/2$).
-  - Los números impares $\{1, 3, 5, \dots\}$ son alcanzados por la rama $a \le 0$ (tomando $a = (1-k)/2$).
-  - Como cubrimos todos los naturales, **es sobreyectiva**.
-- **Biyectividad:** Como es inyectiva y sobreyectiva, **es biyectiva**.
-
-## Bibliografía
-- {puddu2012conjuntos}
-- {uba2017fasciculo9}
+La comprensión de estas propiedades es fundamental para el estudio de la invertibilidad de funciones, ya que solo aquellas que son biyectivas permiten definir una función inversa que deshaga la transformación original de manera unívoca sobre todo el conjunto.

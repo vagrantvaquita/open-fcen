@@ -1,33 +1,9 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Lógica y Demostraciones
-practica: 1
-ejercicio: 15
----
+El producto cartesiano entre dos conjuntos $A$ y $B$, denotado como $A \times B$, es el conjunto formado por todos los pares ordenados $(a, b)$ tales que el primer elemento pertenece a $A$ y el segundo elemento pertenece a $B$. 
 
-# Solución del Ejercicio 15
+Dados los conjuntos $A = \{1, 2, 3\}$ y $B = \{1, 3, 5, 7\}$, para hallar $A \times A$ debemos listar todos los pares posibles combinando elementos de $A$ consigo mismos, resultando en el conjunto $\{ (1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3) \}$.
 
-El producto cartesiano entre dos conjuntos $A$ y $B$, denotado como $A \times B$, es el conjunto de todos los pares ordenados $(a, b)$ tales que $a \in A$ y $b \in B$ {puddu2012conjuntos}.
+Para obtener el producto $A \times B$, formamos pares donde el primer elemento es de $A$ y el segundo de $B$, obteniendo $\{ (1,1), (1,3), (1,5), (1,7), (2,1), (2,3), (2,5), (2,7), (3,1), (3,3), (3,5), (3,7) \}$.
 
-Dados los conjuntos:
-$A = \{1, 2, 3\}$
-$B = \{1, 3, 5, 7\}$
+En el caso del producto $(A \cap B) \times (A \cup B)$, primero calculamos la intersección y la unión de los conjuntos originales. La intersección $A \cap B$ contiene a los elementos comunes $\{ 1, 3 \}$, mientras que la unión $A \cup B$ agrupa a todos los elementos sin repeticiones $\{ 1, 2, 3, 5, 7 \}$. Al realizar el producto cartesiano entre estos nuevos conjuntos, obtenemos los pares $\{ (1,1), (1,2), (1,3), (1,5), (1,7), (3,1), (3,2), (3,3), (3,5), (3,7) \}$.
 
-### i) $A \times A$
-Buscamos todos los pares $(a_1, a_2)$ con $a_1, a_2 \in A$:
-$A \times A = \{ (1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3) \}$
-
-### ii) $A \times B$
-Buscamos todos los pares $(a, b)$ con $a \in A$ y $b \in B$:
-$A \times B = \{ (1,1), (1,3), (1,5), (1,7), (2,1), (2,3), (2,5), (2,7), (3,1), (3,3), (3,5), (3,7) \}$
-
-### iii) $(A \cap B) \times (A \cup B)$
-Primero calculamos la intersección y la unión de $A$ y $B$:
-- $A \cap B = \{ x : x \in A \land x \in B \} = \{ 1, 3 \}$
-- $A \cup B = \{ x : x \in A \lor x \in B \} = \{ 1, 2, 3, 5, 7 \}$
-
-Ahora calculamos el producto cartesiano entre estos dos nuevos conjuntos:
-$(A \cap B) \times (A \cup B) = \{ 1, 3 \} \times \{ 1, 2, 3, 5, 7 \}$
-$= \{ (1,1), (1,2), (1,3), (1,5), (1,7), (3,1), (3,2), (3,3), (3,5), (3,7) \}$
-
-Notemos que el cardinal del producto cartesiano es igual al producto de los cardinales de los conjuntos: $|(A \cap B) \times (A \cup B)| = 2 \cdot 5 = 10$ {uba2017fasciculo9}.
+Es importante observar que el número de elementos del producto cartesiano de conjuntos finitos, conocido como su cardinal, es siempre igual al producto de los cardinales de los conjuntos individuales, lo cual constituye una herramienta fundamental en las técnicas de conteo.

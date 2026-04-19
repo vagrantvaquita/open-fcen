@@ -1,51 +1,7 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Relaciones
-practica: 1
-ejercicio: 28
-subejercicio: a
----
+El conjunto de partes de un conjunto $A$, denotado por $\mathcal{P}(A)$, es el conjunto formado por todos los subconjuntos posibles de $A$. Cuando definimos una relación sobre $\mathcal{P}(A)$ basada en el cardinal de sus elementos, estamos agrupando subconjuntos que poseen la misma cantidad de elementos. Una relación de equivalencia de este tipo particiona al conjunto de partes en clases donde cada clase corresponde a un cardinal posible. Para el conjunto $A=\{1, 2, \dots, 10\}$, el cardinal de cualquier subconjunto $X \subseteq A$ debe ser un número entero comprendido entre $0$ y $|A|=10$.
 
-# Ejercicio 28a
+Dado que los posibles valores para el cardinal de un subconjunto de $A$ son $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$, existen exactamente 11 clases de equivalencia distintas. Cada clase $[X]$ está conformada por todos los subconjuntos $Y \subseteq A$ tales que $|Y| = |X|$. Por ejemplo, la clase correspondiente al cardinal 0 contiene únicamente al conjunto vacío $\emptyset$, mientras que la clase del cardinal 10 contiene solo al conjunto $A$.
 
-Sea $A=\{1,2,3,4,5,6,7,8,9,10\}$. Consideremos en $\mathcal{P}(A)$ la relación de equivalencia dada por el cardinal (es decir, la cantidad de elementos): dos subconjuntos de $A$ están relacionados si y solo si tienen la misma cantidad de elementos. ¿Cuántas clases de equivalencia distintas determina la relación? Hallar un representante para cada clase.
+Para hallar un conjunto de representantes, debemos seleccionar un elemento de cada clase. Una elección natural y sistemática consiste en tomar subconjuntos formados por los primeros $n$ números naturales para cada cardinal $n$. Así, los representantes serían $\emptyset$ para la clase de cardinal 0, $\{1\}$ para la de cardinal 1, $\{1, 2\}$ para la de cardinal 2, y así sucesivamente hasta alcanzar el conjunto $\{1, 2, \dots, 10\}$ para la clase de cardinal 10.
 
-## Resolución
-
-Para resolver este ejercicio, debemos recordar la definición de clase de equivalencia. Si $R$ es una relación de equivalencia sobre un conjunto $X$, la clase de equivalencia de un elemento $x \in X$ se define como:
-$$[x] = \{ y \in X : (x, y) \in R \}$$
-
-En este caso, el conjunto base es el conjunto de partes de $A$, denotado por $\mathcal{P}(A)$. La relación $\sim$ está definida como:
-$$X \sim Y \iff |X| = |Y| \quad \text{para } X, Y \in \mathcal{P}(A)$$
-
-donde $|X|$ denota el cardinal (cantidad de elementos) del conjunto $X$.
-
-### 1. Análisis de las clases de equivalencia
-Dos subconjuntos están en la misma clase si y solo si tienen el mismo cardinal. Por lo tanto, cada clase de equivalencia está determinada por un valor posible del cardinal de los subconjuntos de $A$.
-
-Dado que $A$ tiene 10 elementos ($|A| = 10$), los posibles cardinales para un subconjunto $X \subseteq A$ son los números enteros entre $0$ (para el conjunto vacío $\emptyset$) y $10$ (para el propio conjunto $A$). Es decir:
-$$|X| \in \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$$
-
-Cada uno de estos valores define una clase de equivalencia distinta. Por ejemplo, la clase $[ \emptyset ]$ contiene a todos los subconjuntos de cardinal 0 (solo el vacío), la clase de un conjunto con un elemento contiene a todos los subconjuntos de cardinal 1, y así sucesivamente.
-
-### 2. Cantidad de clases
-Como hay 11 cardinales posibles, la relación determina **11 clases de equivalencia distintas**.
-
-### 3. Representantes de las clases
-Un conjunto de representantes se obtiene tomando un elemento de cada clase. Una elección natural es:
-- Clase cardinal 0: $\emptyset$
-- Clase cardinal 1: $\{1\}$
-- Clase cardinal 2: $\{1, 2\}$
-- Clase cardinal 3: $\{1, 2, 3\}$
-- Clase cardinal 4: $\{1, 2, 3, 4\}$
-- Clase cardinal 5: $\{1, 2, 3, 4, 5\}$
-- Clase cardinal 6: $\{1, 2, 3, 4, 5, 6\}$
-- Clase cardinal 7: $\{1, 2, 3, 4, 5, 6, 7\}$
-- Clase cardinal 8: $\{1, 2, 3, 4, 5, 6, 7, 8\}$
-- Clase cardinal 9: $\{1, 2, 3, 4, 5, 6, 7, 8, 9\}$
-- Clase cardinal 10: $\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$ (es decir, el conjunto $A$)
-
-## Bibliografía
-Esta resolución se apoya en las definiciones de relaciones de equivalencia y conjunto de partes presentadas en:
-- {puddu2012conjuntos}
-- {uba2017fasciculo9}
+Este ejercicio ilustra cómo la noción de cardinalidad permite clasificar colecciones de objetos, reduciendo la complejidad del conjunto de partes a un número finito de categorías basadas en una propiedad numérica compartida.

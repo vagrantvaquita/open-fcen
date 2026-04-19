@@ -1,35 +1,5 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Conjuntos
-practica: 1
-ejercicio: 8
----
+El concepto de conjunto de partes de un conjunto $A$, denotado por $\mathcal{P}(A)$, es fundamental para entender la jerarquía de subconjuntos en la teoría de conjuntos. Por definición, $\mathcal{P}(A)$ es el conjunto que contiene como elementos a todos los subconjuntos posibles de $A$, incluyendo siempre al conjunto vacío $\emptyset$ y al propio conjunto $A$. Una propiedad clave para verificar nuestros resultados es que si un conjunto finito tiene $n$ elementos, su conjunto de partes tendrá exactamente $2^n$ elementos.
 
-# Solución del Ejercicio 8
+Para el caso de un conjunto unitario como $A = \{1\}$, el cálculo es directo: al tener un solo elemento, su conjunto de partes posee $2^1 = 2$ elementos, que son $\emptyset$ y $\{1\}$. Al aumentar la cardinalidad a dos elementos, como en $A = \{a, b\}$, el número de subconjuntos asciende a $2^2 = 4$. Estos se listan sistemáticamente empezando por el de cardinal cero ($\emptyset$), los de cardinal uno ($\{a\}$ y $\{b\}$) y finalmente el de cardinal dos ($\{a, b\}$). En situaciones más complejas donde los elementos mismos pueden ser conjuntos, como en $A = \{1, \{1, 2\}, 3\}$, debemos ser sumamente cuidadosos al identificar los tres elementos de $A$: el número $1$, el conjunto $\{1, 2\}$ y el número $3$. Así, $\mathcal{P}(A)$ contendrá $2^3 = 8$ elementos. Los subconjuntos unitarios de $\mathcal{P}(A)$ serán $\{1\}$, $\{\{1, 2\}\}$ y $\{3\}$, mientras que los binarios combinarán estos elementos de a pares, como por ejemplo $\{1, \{1, 2\}\}$.
 
-El conjunto de partes de un conjunto $A$, denotado por $\mathcal{P}(A)$, es el conjunto cuyos elementos son todos los subconjuntos de $A$. Formalmente:
-$$\mathcal{P}(A) = \{S : S \subseteq A\}$$
-Es importante recordar que, para cualquier conjunto $A$, se cumple que $\emptyset \in \mathcal{P}(A)$ y $A \in \mathcal{P}(A)$ {puddu2012conjuntos}. Además, si $A$ es un conjunto finito con $n$ elementos, entonces $\mathcal{P}(A)$ tiene $2^n$ elementos {uba2017fasciculo9}.
-
-### i) $A = \{1\}$
-El conjunto $A$ tiene $n=1$ elemento, por lo que $\mathcal{P}(A)$ tendrá $2^1 = 2$ elementos.
-Los subconjuntos de $A$ son el conjunto vacío y el propio $A$:
-$$\mathcal{P}(A) = \{ \emptyset, \{1\} \}$$
-
-### ii) $A = \{a, b\}$
-El conjunto $A$ tiene $n=2$ elementos, por lo que $\mathcal{P}(A)$ tendrá $2^2 = 4$ elementos.
-Listamos los subconjuntos según su cardinalidad:
-- Cardinal 0: $\emptyset$
-- Cardinal 1: $\{a\}, \{b\}$
-- Cardinal 2: $\{a, b\}$
-$$\mathcal{P}(A) = \{ \emptyset, \{a\}, \{b\}, \{a, b\} \}$$
-
-### iii) $A = \{1, \{1, 2\}, 3\}$
-El conjunto $A$ tiene $n=3$ elementos. Notar que el objeto $\{1, 2\}$ es un **elemento** de $A$. Por lo tanto, $\mathcal{P}(A)$ tendrá $2^3 = 8$ elementos.
-- Cardinal 0: $\emptyset$
-- Cardinal 1: $\{1\}, \{\{1, 2\}\}, \{3\}$
-- Cardinal 2: $\{1, \{1, 2\}\}, \{1, 3\}, \{\{1, 2\}, 3\}$
-- Cardinal 3: $\{1, \{1, 2\}, 3\}$
-$$\mathcal{P}(A) = \{ \emptyset, \{1\}, \{\{1, 2\}\}, \{3\}, \{1, \{1, 2\}\}, \{1, 3\}, \{\{1, 2\}, 3\}, \{1, \{1, 2\}, 3\} \}$$
-
-Note que en el caso (iii), $\{\{1, 2\}\}$ es el subconjunto que contiene al elemento $\{1, 2\}$, mientras que $\{1, 2\} \subseteq A$ es una afirmación falsa ya que $2 \notin A$.
+Es vital notar que objetos como $\{1, 2\}$ actúan aquí como un único bloque atómico dentro de $A$, lo que implica que $\{\{1, 2\}\}$ es un elemento de $\mathcal{P}(A)$ (un subconjunto unitario de $A$), mientras que $\{1, 2\}$ no es un subconjunto de $A$ ya que el elemento $2$ no pertenece individualmente al conjunto original. Esta distinción de niveles es esencial para no cometer errores de pertenencia en estructuras de datos anidadas.

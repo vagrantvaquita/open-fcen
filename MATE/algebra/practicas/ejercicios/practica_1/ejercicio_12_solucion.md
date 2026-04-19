@@ -1,41 +1,5 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Lógica y Demostraciones
-practica: 1
-ejercicio: 12
----
+El análisis de proposiciones cuantificadas requiere una interpretación precisa de los alcances del cuantificador universal ($\forall$) y del existencial ($\exists$). Mientras que el primero exige que una propiedad se cumpla para la totalidad de los elementos de un conjunto, el segundo solo requiere la existencia de al menos un caso favorable. El orden en que estos cuantificadores aparecen puede cambiar drásticamente el significado de una sentencia, como ocurre al comparar la infinitud de los números naturales con la supuesta existencia de un número máximo.
 
-# Solución del Ejercicio 12
+Al evaluar afirmaciones sobre números naturales, vemos que la disyunción $n \ge 5 \vee n \le 8$ es siempre verdadera, pues no existe ningún número que sea menor que 5 y mayor que 8 al mismo tiempo. En contraste, la sentencia que afirma que existe un $n$ tal que para todo $m$ se cumple $m > n$ es falsa, ya que si tomáramos $m = n$, llegaríamos al absurdo de que un número es estrictamente mayor que sí mismo. En el ámbito de los números reales, la implicación $x > 3 \Rightarrow x^2 > 4$ es verdadera por la monotonía de la función cuadrática en el semieje positivo. Asimismo, la pertenencia de un real al conjunto de los complejos es una verdad trivial basada en la inclusión jerárquica de los conjuntos numéricos tradicionales.
 
-Para decidir el valor de verdad de proposiciones cuantificadas, aplicaremos las definiciones de los cuantificadores universal ($\forall$) y existencial ($\exists$) {puddu2012conjuntos}.
-
-### Decisión de Valor de Verdad y Justificación
-
-* **(a) $\forall n \in \mathbb{N}, n \ge 5 \vee n \le 8$:** **Verdadero**. Para que la disyunción sea falsa, ambas condiciones deben ser falsas. Para que $n < 5$ y $n > 8$ simultáneamente, el número debería ser, por ejemplo, $4$ y $9$ al mismo tiempo, lo cual es imposible. Cualquier número natural cumple al menos una de las dos condiciones.
-* **(b) $\exists n \in \mathbb{N} / n \ge 5 \wedge n \le 8$:** **Verdadero**. Basta con encontrar un ejemplo. El número $n=6$ es un natural y cumple $6 \ge 5$ y $6 \le 8$.
-* **(c) $\forall n \in \mathbb{N}, \exists m \in \mathbb{N} / m > n$:** **Verdadero**. Dado cualquier $n \in \mathbb{N}$, el número $m = n + 1$ es un natural y satisface $m > n$. Esto expresa que el conjunto $\mathbb{N}$ no tiene cota superior.
-* **(d) $\exists n \in \mathbb{N} / \forall m \in \mathbb{N}, m > n$:** **Falso**. Si tal $n$ existiera, al tomar $m = n$ (que es un natural), la proposición exigiría que $n > n$, lo cual es una contradicción.
-* **(e) $\forall x \in \mathbb{R}, x > 3 \Rightarrow x^2 > 4$:** **Verdadero**. Si $x > 3$, entonces $x$ es positivo, por lo que podemos elevar al cuadrado manteniendo el orden: $x^2 > 3^2 = 9$. Como $9 > 4$, por transitividad $x^2 > 4$.
-* **(f) Si $z \in \mathbb{R} \Rightarrow z \in \mathbb{C}$:** **Verdadero**. Por definición, el conjunto de los números complejos contiene a los reales ($\mathbb{R} \subseteq \mathbb{C}$) {uba2017fasciculo9}.
-
-### i) Negaciones y Valor de Verdad
-
-Utilizamos las reglas de De Morgan para cuantificadores ($\sim \forall x, P(x) \equiv \exists x, \sim P(x)$ y viceversa):
-
-* **$\sim$(a): $\exists n \in \mathbb{N} / n < 5 \wedge n > 8$**. **Falso**. No hay naturales menores a 5 y mayores a 8 simultáneamente.
-* **$\sim$(b): $\forall n \in \mathbb{N}, n < 5 \vee n > 8$**. **Falso**. Un contraejemplo es $n=6$.
-* **$\sim$(c): $\exists n \in \mathbb{N} / \forall m \in \mathbb{N}, m \le n$**. **Falso**. Esto diría que existe un natural máximo.
-* **$\sim$(d): $\forall n \in \mathbb{N}, \exists m \in \mathbb{N} / m \le n$**. **Verdadero**. Para cualquier $n$, basta tomar $m=n$.
-* **$\sim$(e): $\exists x \in \mathbb{R} / x > 3 \wedge x^2 \le 4$**. **Falso**. Ya probamos que si $x > 3$, $x^2 > 9$.
-* **$\sim$(f): $\exists z \in \mathbb{R} / z \notin \mathbb{C}$**. **Falso**. Ya que $\mathbb{R} \subseteq \mathbb{C}$.
-
-### ii) Reescribir (e) y (f) usando equivalencias
-
-Recordamos: $p \Rightarrow q \equiv \sim q \Rightarrow \sim p \equiv \sim p \vee q$.
-
-* **(e) $\forall x \in \mathbb{R}, x > 3 \Rightarrow x^2 > 4$**:
-    - **Contrarrecíproco:** $\forall x \in \mathbb{R}, x^2 \le 4 \Rightarrow x \le 3$.
-    - **Disyunción:** $\forall x \in \mathbb{R}, x \le 3 \vee x^2 > 4$.
-* **(f) Si $z \in \mathbb{R} \Rightarrow z \in \mathbb{C}$**:
-    - **Contrarrecíproco:** Si $z \notin \mathbb{C}$, entonces $z \notin \mathbb{R}$.
-    - **Disyunción:** $z \notin \mathbb{R}$ o $z \in \mathbb{C}$.
+Al trabajar con las negaciones de estas proposiciones, aplicamos las leyes de dualidad: negar un "para todo" resulta en un "existe tal que no", y viceversa. Por ejemplo, negar que todo natural sea menor que una cota implica afirmar que para cualquier número natural existe otro mayor, lo que refleja la propiedad de que $\mathbb{N}$ no es acotado. Estas equivalencias, sumadas a la capacidad de reescribir implicaciones como disyunciones o contrarrecíprocos, son herramientas esenciales para la manipulación lógica de enunciados matemáticos y la estructuración de argumentos válidos en Álgebra.

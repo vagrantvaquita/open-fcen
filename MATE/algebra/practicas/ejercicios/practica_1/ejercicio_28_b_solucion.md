@@ -1,41 +1,7 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Relaciones
-practica: 1
-ejercicio: 28
-subejercicio: b
----
+Al trabajar con el conjunto de todos los subconjuntos finitos de los números naturales, denotado como $\mathcal{F}(\mathbb{N})$, la relación de equivalencia definida por el cardinal vincula a dos subconjuntos si y solo si tienen la misma cantidad de elementos. En este contexto, el cardinal de cualquier subconjunto $X \in \mathcal{F}(\mathbb{N})$ es un número natural o cero, es decir, $|X| \in \mathbb{N}_0$. A diferencia de los conjuntos finitos fijos, donde el cardinal máximo está acotado, en $\mathbb{N}$ podemos construir subconjuntos finitos de cualquier tamaño arbitrariamente grande.
 
-# Ejercicio 28b
+Para cada número $n \in \mathbb{N}_0$, existe una clase de equivalencia $C_n$ que agrupa a todos los subconjuntos de $\mathbb{N}$ que poseen exactamente $n$ elementos. Como no existe un límite superior para la cantidad de elementos que un subconjunto finito puede tener, la cantidad de clases de equivalencia es infinita. El conjunto cociente resultante de esta relación está en biyección con el conjunto de los números naturales con el cero, ya que a cada número $n$ le corresponde exactamente una clase de conjuntos con ese cardinal.
 
-En el conjunto de todos los subconjuntos finitos de $\mathbb{N}$, consideremos nuevamente la relación de equivalencia dada por el cardinal: dos subconjuntos finitos de $\mathbb{N}$ están relacionados si y solo si tienen la misma cantidad de elementos. ¿Cuántas clases de equivalencia distintas determina la relación? Hallar un representante para cada clase.
+Un representante para cada clase de equivalencia puede obtenerse eligiendo un subconjunto específico para cada cardinal posible. Por ejemplo, para el cardinal 0 el representante es el conjunto vacío $\emptyset$. Para cualquier $n \ge 1$, podemos definir el representante como el conjunto de los primeros $n$ números naturales, $I_n = \{1, 2, \dots, n\}$. De esta forma, el conjunto de representantes $\{\emptyset\} \cup \{ \{1, 2, \dots, n\} : n \in \mathbb{N} \}$ cubre todas las clases posibles de la relación.
 
-## Resolución
-
-Sea $\mathcal{F}(\mathbb{N})$ el conjunto de todos los subconjuntos finitos de $\mathbb{N}$, es decir:
-$$\mathcal{F}(\mathbb{N}) = \{ X \subseteq \mathbb{N} : X \text{ es finito} \}$$
-La relación $\sim$ en $\mathcal{F}(\mathbb{N})$ está dada por:
-$$X \sim Y \iff |X| = |Y|$$
-
-### 1. Análisis de las clases de equivalencia
-Al igual que en el caso anterior, la clase de equivalencia de un subconjunto está determinada unívocamente por su cantidad de elementos. Como estamos considerando subconjuntos *finitos*, su cardinal debe ser un número natural o cero ($|X| \in \mathbb{N}_0$).
-
-A diferencia del conjunto $A$ del ejercicio anterior, que tenía un tamaño máximo, el conjunto $\mathbb{N}$ es infinito. Por lo tanto, para cualquier número $n \in \mathbb{N}_0$, podemos encontrar al menos un subconjunto de $\mathbb{N}$ que tenga exactamente $n$ elementos. Por ejemplo, el conjunto $\{1, 2, \dots, n\}$.
-
-Esto significa que para cada $n \in \mathbb{N}_0$, existe una clase de equivalencia:
-$$C_n = \{ X \in \mathcal{F}(\mathbb{N}) : |X| = n \}$$
-
-### 2. Cantidad de clases
-Como existe una clase de equivalencia para cada número en $\mathbb{N}_0 = \{0, 1, 2, 3, \dots\}$, la relación determina **infinitas clases de equivalencia**. El conjunto de clases de equivalencia (el conjunto cociente) está en biyección con $\mathbb{N}_0$.
-
-### 3. Representantes de las clases
-Para hallar un representante por clase, podemos elegir, para cada $n \in \mathbb{N}_0$, un subconjunto de $\mathbb{N}$ con $n$ elementos:
-- Para $n=0$: $\emptyset$
-- Para $n \in \mathbb{N}$: el conjunto $I_n = \{ x \in \mathbb{N} : 1 \le x \le n \}$
-
-Así, el conjunto de representantes es $\{\emptyset\} \cup \{ \{1, 2, \dots, n\} : n \in \mathbb{N} \}$.
-
-## Bibliografía
-Esta resolución se apoya en las definiciones de relaciones de equivalencia y cardinalidad de conjuntos finitos presentadas en:
-- {puddu2012conjuntos}
-- {uba2017fasciculo9}
+Lo fundamental en este caso es reconocer que, aunque los elementos de la relación son subconjuntos finitos, la estructura de las clases de equivalencia puede ser infinita si el conjunto base permite cardinalidades no acotadas, estableciendo un puente entre conjuntos finitos y numerables.

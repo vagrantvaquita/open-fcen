@@ -1,47 +1,5 @@
----
-titulo: Solución Ejercicio 4 - Práctica 1
-categoria: Conjuntos
-practica: 1
-ejercicio: 4
----
+El estudio de las operaciones entre subconjuntos de un referencial nos permite explorar propiedades fundamentales como la intersección, la unión y la diferencia simétrica. Para resolver problemas que involucran múltiples operaciones combinadas, es conveniente proceder de manera sistemática, calculando primero los términos internos de los paréntesis y aplicando, cuando sea posible, leyes distributivas o de De Morgan que simplifiquen el proceso.
 
-### Operaciones con Subconjuntos
+Tomando como base los conjuntos definidos sobre el referencial $V = \{1, \{3\}, -2, 7, 10, \{1, 2, 3\}, 3\}$, analizamos primero la expresión $A \cap (B \triangle C)$. Calculamos la diferencia simétrica $B \triangle C$, que consiste en los elementos que están en $B$ o en $C$ pero no en ambos. Dado que $B = \{1, \{3\}, 10\}$ y $C = \{-2, \{1, 2, 3\}, 3\}$, no tienen elementos en común, por lo que su diferencia simétrica es simplemente la unión $\{1, \{3\}, 10, -2, \{1, 2, 3\}, 3\}$. Al intersecar este resultado con $A = \{1, -2, 7, 3\}$, obtenemos $\{1, -2, 3\}$. Si resolvemos ahora $(A \cap B) \triangle (A \cap C)$, encontramos que $A \cap B = \{1\}$ y $A \cap C = \{-2, 3\}$. La diferencia simétrica entre estos dos conjuntos unitarios y binarios es $\{1, -2, 3\}$, lo que verifica la propiedad distributiva de la intersección respecto a la diferencia simétrica: $A \cap (B \triangle C) = (A \cap B) \triangle (A \cap C)$.
 
-Dados los conjuntos:
-- $V = \{1, \{3\}, -2, 7, 10, \{1, 2, 3\}, 3\}$
-- $A = \{1, -2, 7, 3\}$
-- $B = \{1, \{3\}, 10\}$
-- $C = \{-2, \{1, 2, 3\}, 3\}$
-
-#### i) $A \cap (B \triangle C)$
-
-Primero calculamos la diferencia simétrica $B \triangle C = (B \setminus C) \cup (C \setminus B)$:
-- $B \setminus C = \{1, \{3\}, 10\}$ (pues ninguno de estos está en $C$).
-- $C \setminus B = \{-2, \{1, 2, 3\}, 3\}$ (pues ninguno de estos está en $B$).
-- $B \triangle C = \{1, \{3\}, 10, -2, \{1, 2, 3\}, 3\}$.
-
-Luego, intersecamos con $A$:
-$$A \cap (B \triangle C) = \{1, -2, 7, 3\} \cap \{1, \{3\}, 10, -2, \{1, 2, 3\}, 3\} = \{1, -2, 3\}$$
-
-#### ii) $(A \cap B) \triangle (A \cap C)$
-
-Calculamos cada intersección por separado:
-- $A \cap B = \{1\}$.
-- $A \cap C = \{-2, 3\}$.
-
-Luego, calculamos la diferencia simétrica:
-$$(A \cap B) \triangle (A \cap C) = \{1\} \triangle \{-2, 3\} = \{1, -2, 3\}$$
-
-Notamos que el resultado es idéntico al ítem (i), verificando la propiedad distributiva de la intersección respecto a la diferencia simétrica: $A \cap (B \triangle C) = (A \cap B) \triangle (A \cap C)$.
-
-#### iii) $A^c \cap B^c \cap C^c$
-
-Utilizamos las Leyes de De Morgan: $A^c \cap B^c \cap C^c = (A \cup B \cup C)^c$.
-Primero calculamos la unión:
-$$A \cup B \cup C = \{1, -2, 7, 3, \{3\}, 10, \{1, 2, 3\}\}$$
-Comparamos con el referencial $V$:
-$$V = \{1, \{3\}, -2, 7, 10, \{1, 2, 3\}, 3\}$$
-Como todos los elementos de $V$ están en la unión, tenemos que $A \cup B \cup C = V$. Por lo tanto:
-$$(A \cup B \cup C)^c = V \setminus (A \cup B \cup C) = \emptyset$$
-
-{puddu2012conjuntos}
+Para calcular el complemento de la unión de varios conjuntos, como en el caso de $A^c \cap B^c \cap C^c$, las Leyes de De Morgan establecen que esto es equivalente a $(A \cup B \cup C)^c$. Al reunir todos los elementos de $A$, $B$ y $C$, obtenemos el conjunto $\{1, -2, 7, 3, \{3\}, 10, \{1, 2, 3\}\}$. Al comparar esta unión con el referencial $V$, observamos que todos los elementos de $V$ están presentes en la unión. Por lo tanto, el complemento de la unión respecto a $V$ es el conjunto vacío, ya que no queda ningún elemento de $V$ fuera de la combinación de $A$, $B$ y $C$. El dominio fluido de estas operaciones y sus propiedades de simplificación es una herramienta indispensable para el desarrollo de demostraciones más abstractas en teoría de conjuntos.

@@ -1,32 +1,5 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Conjuntos
-practica: 1
-ejercicio: 9
----
+La demostración de equivalencias entre afirmaciones que involucran el conjunto de partes se fundamenta en la relación intrínseca entre la pertenencia a $\mathcal{P}(A)$ y la inclusión en $A$. Para probar que $\mathcal{P}(A) \subseteq \mathcal{P}(B)$ si y solo si $A \subseteq B$, debemos realizar una demostración en dos direcciones, utilizando en cada paso las definiciones de inclusión y de conjunto de partes para conectar los distintos niveles de abstracción.
 
-# Solución del Ejercicio 9
+En la implicación directa, partimos de la hipótesis $\mathcal{P}(A) \subseteq \mathcal{P}(B)$ para demostrar que $A \subseteq B$. Tomamos un elemento genérico $x \in A$ y observamos que esto implica que el conjunto unitario $\{x\}$ es un subconjunto de $A$, es decir, $\{x\} \in \mathcal{P}(A)$. Aplicando nuestra hipótesis, deducimos que $\{x\} \in \mathcal{P}(B)$, lo cual por definición significa que $\{x\} \subseteq B$. Como el único elemento de este conjunto unitario es $x$, concluimos que $x \in B$. Al ser este razonamiento válido para cualquier elemento de $A$, queda probada la inclusión de $A$ en $B$. En la dirección recíproca, suponemos que $A \subseteq B$ y queremos ver que todo subconjunto de $A$ es también subconjunto de $B$. Sea $S \in \mathcal{P}(A)$, entonces $S \subseteq A$. Por la transitividad de la inclusión, si $S \subseteq A$ y $A \subseteq B$, necesariamente $S \subseteq B$, lo que implica por definición que $S \in \mathcal{P}(B)$.
 
-Dada la equivalencia $P \iff Q$, debemos demostrar las dos implicaciones: la directa ($\Rightarrow$) y la recíproca ($\Leftarrow$) {puddu2012conjuntos}.
-
-### Implicación Directa ($\Rightarrow$): $\mathcal{P}(A) \subseteq \mathcal{P}(B) \Rightarrow A \subseteq B$
-
-Supongamos que $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. Queremos probar que para todo elemento $x \in A$, se cumple que $x \in B$.
-1. Sea $x$ un elemento cualquiera de $A$ ($x \in A$).
-2. Entonces $\{x\}$ es un subconjunto de $A$, lo que implica que $\{x\} \in \mathcal{P}(A)$.
-3. Dado que por hipótesis $\mathcal{P}(A) \subseteq \mathcal{P}(B)$, se deduce que $\{x\} \in \mathcal{P}(B)$.
-4. Por la definición de conjunto de partes, $\{x\} \in \mathcal{P}(B)$ implica que $\{x\} \subseteq B$.
-5. Si el conjunto unitario $\{x\}$ está contenido en $B$, entonces su único elemento debe pertenecer a $B$. Por lo tanto, $x \in B$.
-Como esto es válido para todo $x \in A$, concluimos que $A \subseteq B$.
-
-### Implicación Recíproca ($\Leftarrow$): $A \subseteq B \Rightarrow \mathcal{P}(A) \subseteq \mathcal{P}(B)$
-
-Supongamos que $A \subseteq B$. Queremos probar que para todo $S \in \mathcal{P}(A)$, se cumple que $S \in \mathcal{P}(B)$.
-1. Sea $S \in \mathcal{P}(A)$ un elemento cualquiera de $\mathcal{P}(A)$.
-2. Por definición de conjunto de partes, esto significa que $S \subseteq A$.
-3. Tenemos ahora que $S \subseteq A$ y, por hipótesis, $A \subseteq B$.
-4. Dado que la inclusión de conjuntos es una relación transitiva {uba2017fasciculo9}, de $S \subseteq A$ y $A \subseteq B$ se concluye que $S \subseteq B$.
-5. Por la definición de conjunto de partes, $S \subseteq B$ implica que $S \in \mathcal{P}(B)$.
-Como esto es válido para todo $S \in \mathcal{P}(A)$, concluimos que $\mathcal{P}(A) \subseteq \mathcal{P}(B)$.
-
-$\square$
+Este ejercicio ilustra cómo propiedades de los conjuntos "base" se heredan en sus conjuntos de partes, reforzando la idea de que la inclusión es una relación de orden que se preserva al subir de nivel en la jerarquía de conjuntos. Comprender esta preservación de la estructura es un paso clave para el estudio de funciones y relaciones sobre el conjunto de potencias.

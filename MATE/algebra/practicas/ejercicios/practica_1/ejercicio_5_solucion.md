@@ -1,24 +1,5 @@
----
-titulo: Solución Ejercicio 5 - Práctica 1
-categoria: Conjuntos
-practica: 1
-ejercicio: 5
----
+Las Leyes de De Morgan constituyen uno de los pilares de la lógica de conjuntos y el álgebra de Boole, estableciendo una relación dual entre las operaciones de unión e intersección a través del complemento. Estas leyes nos permiten transformar el complemento de una operación compleja en una operación más sencilla entre los complementos de los conjuntos individuales, lo cual es fundamental para simplificar expresiones lógicas y demostraciones matemáticas.
 
-### Leyes de De Morgan Generalizadas
+Para una familia finita de subconjuntos de un referencial $V$, como $A$, $B$ y $C$, la primera ley establece que el complemento de la unión es igual a la intersección de los complementos, es decir, $(A \cup B \cup C)^c = A^c \cap B^c \cap C^c$. Desde un punto de vista lógico, esto significa que para que un objeto no pertenezca a ninguno de los conjuntos de la unión, debe cumplirse necesariamente que no pertenezca a $A$, que no pertenezca a $B$ y que no pertenezca a $C$ simultáneamente. La segunda ley presenta la forma dual: el complemento de la intersección es igual a la unión de los complementos, expresado como $(A \cap B \cap C)^c = A^c \cup B^c \cup C^c$. En este caso, la interpretación nos dice que para que un elemento falle en pertenecer a la intersección común, basta con que no pertenezca a al menos uno de los conjuntos que la integran.
 
-Dada una familia finita de subconjuntos de un referencial $V$, las Leyes de De Morgan establecen la relación entre el complemento de la unión y la intersección de los complementos, y viceversa.
-
-Para tres conjuntos $A, B, C \subseteq V$:
-
-#### i) Complemento de la unión en términos de intersecciones y complementos:
-$$(A \cup B \cup C)^c = A^c \cap B^c \cap C^c$$
-
-**Interpretación:** Para que un elemento no pertenezca a la unión de $A$, $B$ y $C$, debe ocurrir simultáneamente que no esté en $A$, no esté en $B$ y no esté en $C$.
-
-#### ii) Complemento de la intersección en términos de uniones y complementos:
-$$(A \cap B \cap C)^c = A^c \cup B^c \cup C^c$$
-
-**Interpretación:** Para que un elemento no pertenezca a la intersección de $A$, $B$ y $C$, basta con que no esté en al menos uno de los tres conjuntos.
-
-{puddu2012conjuntos}
+Estas equivalencias no solo facilitan el cálculo de regiones en diagramas, sino que son la base para negar proposiciones compuestas en lógica proposicional. Comprender la dualidad de De Morgan es esencial para avanzar hacia estructuras algebraicas más abstractas donde las operaciones de unión e intersección se generalizan.

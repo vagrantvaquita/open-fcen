@@ -1,39 +1,7 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Relaciones
-practica: 1
-ejercicio: 23
----
+El análisis de la coexistencia de propiedades como la simetría y la antisimetría en una misma relación sobre un conjunto $A$ revela restricciones estructurales profundas sobre la naturaleza de los pares ordenados que pueden pertenecer a ella. 
 
-### Resolución
+Si una relación $\mathcal{R}$ es simultáneamente simétrica y antisimétrica, entonces para cualquier par $(x,y)$ en la relación, la simetría obliga a que $(y,x)$ también pertenezca a ella. Seguidamente, la definición de antisimetría impone que si $(x,y)$ y $(y,x)$ están en la relación, entonces $x$ debe ser necesariamente igual a $y$. Esto implica que los únicos elementos que pueden estar relacionados son aquellos consigo mismos, lo que significa que $\mathcal{R}$ es forzosamente un subconjunto de la relación identidad $\Delta_A = \{(x,x) : x \in A\}$. Si además exigimos que la relación sea de equivalencia y de orden al mismo tiempo, la propiedad de reflexividad nos obliga a incluir todos los pares de la forma $(x,x)$ para cada $x$ en $A$, lo que reduce la posibilidad a una única relación posible: la identidad exacta sobre el conjunto.
 
-#### i) Relaciones simétricas y antisimétricas
-Sea $\mathcal{R}$ una relación en $A$.
-- Por ser **simétrica**: $\forall x, y \in A, (x,y) \in \mathcal{R} \implies (y,x) \in \mathcal{R}$.
-- Por ser **antisimétrica**: $\forall x, y \in A, ((x,y) \in \mathcal{R} \land (y,x) \in \mathcal{R}) \implies x=y$.
+Por otro lado, es perfectamente posible que una relación no cumpla con ninguna de estas propiedades. Por ejemplo, si consideramos el conjunto $A=\{1,2,3\}$ y definimos la relación $\mathcal{R} = \{(1,2), (2,1), (1,3)\}$, podemos verificar que no es simétrica debido a que el par $(1,3)$ no cuenta con su inverso $(3,1)$ en el conjunto. Al mismo tiempo, la relación no es antisimétrica porque contiene tanto a $(1,2)$ como a $(2,1)$ a pesar de que $1$ y $2$ son elementos distintos.
 
-Combinando ambas condiciones, si $(x,y) \in \mathcal{R}$, por simetría $(y,x) \in \mathcal{R}$, y por antisimetría esto implica que $x=y$.
-Esto significa que los únicos pares posibles en $\mathcal{R}$ son de la forma $(x,x)$.
-Por lo tanto, las relaciones que cumplen ambas propiedades son todos los **subconjuntos de la relación identidad** (o diagonal):
-$$\mathcal{R} \subseteq \Delta_A = \{(x,x) : x \in A\}$$
-
-#### ii) Relaciones de equivalencia y de orden
-- Una **relación de equivalencia** es reflexiva, simétrica y transitiva.
-- Una **relación de orden** es reflexiva, antisimétrica y transitiva.
-
-Para que una relación cumpla ambas, debe ser reflexiva, simétrica, antisimétrica y transitiva.
-Por el inciso anterior, al ser simétrica y antisimétrica, debe cumplirse que $\mathcal{R} \subseteq \Delta_A$.
-Además, por ser **reflexiva**, debe contener a todos los pares $(x,x)$ para todo $x \in A$, es decir, $\Delta_A \subseteq \mathcal{R}$.
-Por lo tanto, la única relación que es simultáneamente de equivalencia y de orden es la **relación identidad**:
-$$\mathcal{R} = \{(x,x) : x \in A\}$$
-
-#### iii) ¿Puede una relación no ser ni simétrica ni antisimétrica?
-Sí. Para que no sea simétrica, debe existir al menos un par $(x,y) \in \mathcal{R}$ tal que $(y,x) \notin \mathcal{R}$ (con $x \neq y$).
-Para que no sea antisimétrica, deben existir $x, y \in A$ con $x \neq y$ tales que $(x,y) \in \mathcal{R}$ y $(y,x) \in \mathcal{R}$.
-**Ejemplo:** Sea $A=\{1,2,3\}$ y la relación:
-$$\mathcal{R} = \{(1,2), (2,1), (1,3)\}$$
-- **No es simétrica** porque $(1,3) \in \mathcal{R}$ pero $(3,1) \notin \mathcal{R}$.
-- **No es antisimétrica** porque $(1,2) \in \mathcal{R}$ y $(2,1) \in \mathcal{R}$, pero $1 \neq 2$.
-
----
-**Cita:** {puddu2012conjuntos}
+Este análisis demuestra que las definiciones de equivalencia y orden son, en gran medida, excluyentes salvo por la relación de identidad, lo que subraya la naturaleza fundamentalmente distinta que existe entre los conceptos de igualdad y de ordenamiento jerárquico.

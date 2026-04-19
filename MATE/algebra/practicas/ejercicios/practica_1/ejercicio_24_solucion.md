@@ -1,47 +1,7 @@
----
-titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
-categoria: Relaciones
-practica: 1
-ejercicio: 24
----
+Una relación de equivalencia sobre un conjunto $A$ induce una fragmentación lógica de dicho conjunto en subconjuntos disjuntos denominados clases de equivalencia. Cada una de estas clases agrupa a todos los elementos que están relacionados entre sí, garantizando que cualquier elemento del conjunto original pertenezca a exactamente una clase.
 
-### Resolución
+Dada la relación de equivalencia $\mathcal{R}$ en el conjunto $A=\{a,b,c,d,e,f\}$, definida por los pares que aseguran la reflexividad y las simetrías explícitas entre elementos, podemos proceder a calcular cada clase de equivalencia. La clase del elemento $a$, que denotamos como $\bar{a}$, está formada por todos los elementos $y$ tales que el par $(a,y)$ pertenece a la relación; al observar los pares $(a,a), (a,b)$ y $(a,f)$, determinamos que $\bar{a} = \{a, b, f\}$. Es importante notar que las clases de $b$ y $f$ serán idénticas a esta, ya que el estar relacionados entre sí implica que comparten todos sus vínculos. Para el elemento $c$, los pares $(c,c)$ y $(c,e)$ nos indican que su clase es $\bar{c} = \{c, e\}$, la cual coincide con la clase de $e$. Finalmente, para el elemento $d$, el único par disponible es el reflexivo $(d,d)$, resultando en la clase unitaria $\bar{d} = \{d\}$.
 
-Dada la relación de equivalencia $\mathcal{R}$ en $A=\{a,b,c,d,e,f\}$:
-$$\mathcal{R}=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(a,b),(b,a),(a,f),(f,a),(b,f),(f,b),(c,e),(e,c)\}$$
+Al reunir todas las clases distintas halladas, obtenemos la partición asociada al conjunto cociente, que en este caso es $\mathcal{P} = \{\{a,b,f\}, \{c,e\}, \{d\}\}$. Esta colección de subconjuntos cumple estrictamente con las condiciones de una partición: cada clase es no vacía, la intersección entre cualquier par de clases distintas es vacía y la unión de todas ellas recupera el conjunto original $A$.
 
-Recordamos que la clase de equivalencia de un elemento $x$, denotada $\bar{x}$, es el conjunto de todos los elementos de $A$ relacionados con él:
-$$\bar{x} = \{y \in A : (x,y) \in \mathcal{R}\}$$
-
-#### 1. Cálculo de las clases de equivalencia
-- **Clase de $a$**: Buscamos todos los pares $(a, y) \in \mathcal{R}$.
-  Observamos los pares: $(a,a), (a,b), (a,f)$.
-  Por lo tanto: $\bar{a} = \{a, b, f\}$.
-- **Clase de $b$**: Buscamos todos los pares $(b, y) \in \mathcal{R}$.
-  Observamos los pares: $(b,b), (b,a), (b,f)$.
-  Por lo tanto: $\bar{b} = \{a, b, f\}$.
-  Notar que $\bar{b} = \bar{a}$, como es de esperar dado que $(a,b) \in \mathcal{R}$.
-- **Clase de $c$**: Buscamos todos los pares $(c, y) \in \mathcal{R}$.
-  Observamos los pares: $(c,c), (c,e)$.
-  Por lo tanto: $\bar{c} = \{c, e\}$.
-- **Clase de $d$**: Buscamos todos los pares $(d, y) \in \mathcal{R}$.
-  Únicamente tenemos el par: $(d,d)$.
-  Por lo tanto: $\bar{d} = \{d\}$.
-
-#### 2. Partición asociada
-La partición asociada a una relación de equivalencia es el conjunto cociente $A/\mathcal{R}$, que consiste en el conjunto de todas las clases de equivalencia distintas {puddu2012conjuntos}.
-Las clases distintas halladas son:
-- $C_1 = \{a, b, f\}$
-- $C_2 = \{c, e\}$
-- $C_3 = \{d\}$
-
-Verificamos que forman una partición de $A$:
-1. $C_i \neq \emptyset$ para todo $i$.
-2. $C_1 \cap C_2 = \emptyset$, $C_1 \cap C_3 = \emptyset$, $C_2 \cap C_3 = \emptyset$.
-3. $C_1 \cup C_2 \cup C_3 = \{a, b, f\} \cup \{c, e\} \cup \{d\} = \{a, b, c, d, e, f\} = A$.
-
-Por lo tanto, la **partición asociada** es:
-$$\mathcal{P} = \{\{a,b,f\}, \{c,e\}, \{d\}\}$$
-
----
-**Cita:** {puddu2012conjuntos}
+La correspondencia biunívoca entre las relaciones de equivalencia y las particiones es un pilar fundamental del álgebra, ya que permite transformar el estudio de relaciones abstractas entre pares de elementos en el estudio de estructuras de clasificación y agrupamiento coherente.

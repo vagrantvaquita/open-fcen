@@ -1,33 +1,5 @@
----
-titulo: Solución Ejercicio 6 - Práctica 1
-categoria: Conjuntos
-practica: 1
-ejercicio: 6
----
+El uso de diagramas de Venn es una técnica visual sumamente efectiva para interpretar operaciones combinadas entre conjuntos, permitiéndonos identificar regiones específicas mediante el sombreado sistemático. Al trabajar con tres conjuntos $A, B$ y $C$, cada operación define una porción del espacio del referencial que cumple con determinadas condiciones de pertenencia o exclusión.
 
-### Representación en Diagramas de Venn
+Para representar la región $(A \cup B^c) \cap C$, analizamos primero el paréntesis: $A \cup B^c$ abarca todo el interior de $A$ y toda el área externa a $B$. Al intersecar este resultado con el conjunto $C$, la región resultante queda limitada exclusivamente al interior de $C$. En términos prácticos, sombrearíamos las zonas donde $C$ coincide con $A$ y aquellas partes de $C$ que no tienen contacto con $B$. En el caso de la diferencia simétrica $A \triangle (B \cup C)$, debemos considerar la unión de lo que pertenece a $A$ pero no a $B \cup C$, con lo que pertenece a $B \cup C$ pero no a $A$. Esto se traduce en sombrear la región de $A$ que no se solapa con los otros dos conjuntos, junto con las áreas de $B$ y $C$ que se encuentran fuera de los límites de $A$.
 
-Dado que no es posible generar gráficos directamente, se describe la región sombreada para cada caso en un diagrama de tres conjuntos ($A, B$ y $C$).
-
-#### i) $(A \cup B^c) \cap C$
-
-Para sombrear esta región, podemos analizarla por partes:
-- La región $A \cup B^c$ incluye todo el interior de $A$ y todo lo que está por fuera de $B$ (el complemento de $B$).
-- Al intersecarla con $C$, nos quedamos únicamente con las partes de $C$ que cumplen alguna de las dos condiciones anteriores.
-- **Región resultante:** Es la unión de $A \cap C$ con $C \setminus B$. En el diagrama, sombrearíamos la zona donde $C$ se solapa con $A$ y la zona de $C$ que no se solapa con $B$.
-
-#### ii) $A \triangle (B \cup C)$
-
-La diferencia simétrica entre $X$ e $Y$ es $(X \setminus Y) \cup (Y \setminus X)$. Aquí $X=A$ e $Y=B \cup C$:
-- **$A \setminus (B \cup C)$:** Es la parte de $A$ que no toca ni a $B$ ni a $C$.
-- **$(B \cup C) \setminus A$:** Es toda la región de $B$ y $C$ que queda fuera de $A$.
-- **Región resultante:** Sombrear la parte "exclusiva" de $A$ (lo que no comparte con nadie) y las partes de $B$ y $C$ que no están dentro de $A$.
-
-#### iii) $A \cup (B \triangle C)$
-
-La unión se toma sobre $A$ y el resultado de la diferencia simétrica entre $B$ y $C$:
-- **$B \triangle C$:** Es $(B \setminus C) \cup (C \setminus B)$. Son las partes de $B$ que no están en $C$ y las partes de $C$ que no están en $B$.
-- **Al unir con $A$:** Simplemente añadimos todo el conjunto $A$ a la región anterior.
-- **Región resultante:** Sombrear todo $A$, más la zona de $B$ que no es de $C$, más la zona de $C$ que no es de $B$.
-
-{puddu2012conjuntos}
+Finalmente, para la expresión $A \cup (B \triangle C)$, partimos de la diferencia simétrica entre $B$ y $C$, que incluye las áreas exclusivas de $B$ y de $C$ (donde no se intersecan entre sí). Al realizar la unión de este resultado con todo el conjunto $A$, simplemente añadimos la totalidad del círculo de $A$ al sombreado previo. La región final comprende todo $A$, más los fragmentos de $B$ y $C$ que no son compartidos entre ellos. El entrenamiento en esta visualización geométrica de las operaciones conjuntistas es un paso previo necesario para abordar con éxito las demostraciones analíticas por doble inclusión.

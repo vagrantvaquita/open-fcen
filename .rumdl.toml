@@ -1,0 +1,15 @@
+# rumdl configuration file
+
+[global]
+
+disable = ["MD013"]
+
+exclude = [
+    "CHANGELOG.md",
+    "LICENSE.md",
+]
+
+respect-gitignore = true
+
+[per-file-ignores]
+"*/*/practicas/ejercicios/*.md" = ["MD041"]

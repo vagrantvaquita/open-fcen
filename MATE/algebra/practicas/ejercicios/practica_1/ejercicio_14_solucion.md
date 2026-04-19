@@ -1,4 +1,4 @@
-Probar identidades entre conjuntos requiere, en general, demostrar la igualdad de las funciones características o utilizar las leyes del álgebra de conjuntos, como las Leyes de De Morgan y la distributividad. 
+Probar identidades entre conjuntos requiere, en general, demostrar la igualdad de las funciones características o utilizar las leyes del álgebra de conjuntos, como las Leyes de De Morgan y la distributividad.
 
 Para demostrar que $A \cap (B \triangle C) = (A \cap B) \triangle (A \cap C)$, observamos que la intersección es distributiva respecto a la diferencia simétrica. Desarrollando el lado izquierdo tenemos $A \cap (B \triangle C) = A \cap ((B \cap C^c) \cup (C \cap B^c)) = (A \cap B \cap C^c) \cup (A \cap C \cap B^c)$. Por otro lado, expandiendo el lado derecho obtenemos $(A \cap B) \triangle (A \cap C) = ((A \cap B) - (A \cap C)) \cup ((A \cap C) - (A \cap B)) = ((A \cap B) \cap (A^c \cup C^c)) \cup ((A \cap C) \cap (A^c \cup B^c))$. Al distribuir la intersección, los términos con $A \cap A^c$ se anulan por ser el conjunto vacío, quedando $(A \cap B \cap C^c) \cup (A \cap C \cap B^c)$, lo que prueba la igualdad.
 

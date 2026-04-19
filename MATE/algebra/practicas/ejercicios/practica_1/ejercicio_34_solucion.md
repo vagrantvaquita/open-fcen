@@ -49,4 +49,5 @@ Como $f$ y $g$ son biyectivas, ambas son sobreyectivas. Por el inciso (iv), $f \
 Al ser $f \circ g$ inyectiva y sobreyectiva, concluimos que $f \circ g$ es biyectiva.
 
 ---
+
 Bibliografía consultada: {puddu2012conjuntos}, {uba2017fasciculo9}.

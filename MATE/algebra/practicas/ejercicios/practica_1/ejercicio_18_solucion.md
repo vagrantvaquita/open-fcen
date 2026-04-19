@@ -1,4 +1,4 @@
-Definir una relación por extensión consiste en listar explícitamente todos los pares ordenados $(a, b)$ pertenecientes al producto cartesiano $A \times B$ que satisfacen una condición o propiedad lógica determinada. 
+Definir una relación por extensión consiste en listar explícitamente todos los pares ordenados $(a, b)$ pertenecientes al producto cartesiano $A \times B$ que satisfacen una condición o propiedad lógica determinada.
 
 Dados los conjuntos $A = \{1, 2, 3\}$ y $B = \{1, 3, 5, 7\}$, evaluamos distintas condiciones para construir cada relación. Si la propiedad requerida es $a \le b$, seleccionamos aquellos pares donde la primera componente es menor o igual a la segunda, obteniendo el conjunto $\mathcal{R} = \{ (1,1), (1,3), (1,5), (1,7), (2,3), (2,5), (2,7), (3,3), (3,5), (3,7) \}$. Por el contrario, para la condición $a > b$, buscamos pares donde la primera componente sea estrictamente mayor, lo que nos deja únicamente con $\mathcal{R} = \{ (2,1), (3,1) \}$.
 

@@ -53,5 +53,6 @@ Por lo tanto, **$m = 64$** es una solución.
 **Soluciones para 15:** $\{15, 64\}$.
 
 ## Bibliografía
+
 - {puddu2012conjuntos}
 - {uba2017fasciculo9}

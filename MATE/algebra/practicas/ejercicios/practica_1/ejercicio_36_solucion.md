@@ -12,9 +12,9 @@ $$g\mathcal{R}h \iff g \circ f = h \circ f$$
 
 Para demostrar que $\mathcal{R}$ es una relación de equivalencia, verificamos las tres propiedades fundamentales {puddu2012conjuntos}:
 
-*   **Reflexividad:** Para toda $g \in \mathcal{F}$, se cumple que $g \circ f = g \circ f$, por lo tanto $g\mathcal{R}g$.
-*   **Simetría:** Si $g\mathcal{R}h$, entonces $g \circ f = h \circ f$. Por la propiedad de simetría de la igualdad, $h \circ f = g \circ f$, luego $h\mathcal{R}g$.
-*   **Transitividad:** Si $g\mathcal{R}h$ y $h\mathcal{R}k$, entonces $g \circ f = h \circ f$ y $h \circ f = k \circ f$. Por transitividad de la igualdad, $g \circ f = k \circ f$, luego $g\mathcal{R}k$.
+* **Reflexividad:** Para toda $g \in \mathcal{F}$, se cumple que $g \circ f = g \circ f$, por lo tanto $g\mathcal{R}g$.
+* **Simetría:** Si $g\mathcal{R}h$, entonces $g \circ f = h \circ f$. Por la propiedad de simetría de la igualdad, $h \circ f = g \circ f$, luego $h\mathcal{R}g$.
+* **Transitividad:** Si $g\mathcal{R}h$ y $h\mathcal{R}k$, entonces $g \circ f = h \circ f$ y $h \circ f = k \circ f$. Por transitividad de la igualdad, $g \circ f = k \circ f$, luego $g\mathcal{R}k$.
 
 **¿Es siempre antisimétrica?**
 No necesariamente. Para que $\mathcal{R}$ sea antisimétrica, de $g\mathcal{R}h$ y $h\mathcal{R}g$ debería seguirse que $g = h$. Sin embargo, si $f$ no es sobreyectiva, existen elementos en su codominio que no están en su imagen. Las funciones $g$ y $h$ podrían diferir en esos puntos y aun así cumplir $g \circ f = h \circ f$.
@@ -39,4 +39,5 @@ $$[g]_{\mathcal{R}} = \{g\}$$
 Este es un caso donde la relación de equivalencia coincide con la igualdad de funciones.
 
 ---
+
 Bibliografía consultada: {puddu2012conjuntos}, {uba2017fasciculo9}.

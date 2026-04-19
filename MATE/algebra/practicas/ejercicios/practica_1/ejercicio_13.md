@@ -1,5 +1,5 @@
 ---
-titulo: Álgebra I - Práctica 1: Conjuntos, Relaciones y Funciones
+titulo: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
 categoria: Lógica y Demostraciones
 practica: 1
 ejercicio: 13

@@ -1,6 +1,6 @@
 # Facultad de Ciencias Exactas y Naturales - UBA
 
-## Álgebra I - Práctica 1: Conjuntos, Relaciones y Funciones
+## Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
 
 ### I. Conjuntos
 

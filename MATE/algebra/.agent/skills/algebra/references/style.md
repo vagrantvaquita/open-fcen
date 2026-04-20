@@ -1,3 +1,3 @@
 # Style
 
-## Resolucion de ejercicios.
+## Resolucion de ejercicios

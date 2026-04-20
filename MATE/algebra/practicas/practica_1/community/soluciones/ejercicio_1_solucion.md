@@ -1,3 +1,11 @@
+---
+title: Álgebra I - Práctica 1 Conjuntos, Relaciones y Funciones
+category: Conjuntos
+description: Un ejercicio a resolver dentro de la practica.
+practica: practica_1
+ejercicio: ejercicio_1
+---
+
 Recordemos:
 
 * $x \in A$: El objeto x es un elemento que está suelto adentro del conjunto $A$.

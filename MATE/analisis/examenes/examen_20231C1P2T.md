@@ -19,8 +19,8 @@ $$
 
 $$
 \lim_{(x,y) \to (0,-1)} \frac{(y+1)^3ln(-4y)}{4x^2+4(y+1)^2}
-
 $$
+
 ---
 
 Sea $f: \mathbb{R^2} \to \mathbb{R}$ definida por

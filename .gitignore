@@ -1,2 +1,5 @@
 # cache
 .*_cache/
+
+# data
+.data/

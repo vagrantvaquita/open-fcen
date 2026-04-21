@@ -14,11 +14,11 @@ $$
 Analizar la existencia de los siguientes limites
 
 $$
-\lim_{(x,y) \ to (1,-2)} \frac{(x-1)(y+2)^2sin(x-1)}{(x-1)^4 + (y+2)^4}
+\lim_{(x,y) \to (1,-2)} \frac{(x-1)(y+2)^2sin(x-1)}{(x-1)^4 + (y+2)^4}
 $$
 
 $$
-\lim_{(x,y) \ to (0,-1)} \frac{(y+1)^3ln(-4y)}{4x^2+4(y+1)^2}
+\lim_{(x,y) \to (0,-1)} \frac{(y+1)^3ln(-4y)}{4x^2+4(y+1)^2}
 
 $$
 ---
